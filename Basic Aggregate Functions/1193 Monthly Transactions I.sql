@@ -2,7 +2,6 @@ select format(t.trans_date, 'yyyy-MM') as month, t.country, count(*) as trans_co
     count (
         case
             when state = 'approved' then 1
-            else 0
         end
     ) as approved_count,
     sum(amount) as trans_total_amount,
